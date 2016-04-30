@@ -6,7 +6,7 @@
 
 @section('navigation')
   <a href="/users">User Generator</a>
-  <a href="/wilcoIpsum">Text Generator</a>
+  <a href="/loremIpsum">Text Generator</a>
 
 @stop
 
@@ -18,5 +18,9 @@ htaccess generator<br />
 wilcoIpsum <br />
 user generator <br />
 password generator <br />
+
+
+
+
 
 @stop

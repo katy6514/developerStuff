@@ -47,11 +47,8 @@
 
   <main>
 
-    <!-- @yield('password_generator')
 
-    @yield('user_generator')
 
-    @yield('wilco_ipsum') -->
 
     <section>
         <!-- Main page content will be yielded here -->

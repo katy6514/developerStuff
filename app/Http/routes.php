@@ -62,8 +62,8 @@ Route::get('/', function() {
 });
 Route::get('/users', 'UserController@getIndex');
 Route::post('/users', 'UserController@postIndex');
-Route::get('/wilcoIpsum', 'LipsumController@getIndex');
-Route::post('/wilcoIpsum', 'LipsumController@postIndex');
+Route::get('/loremIpsum', 'LipsumController@getIndex');
+Route::post('/loremIpsum', 'LipsumController@postIndex');
 // Route::get('/user', function() {
 //   $faker = Faker\Factory::create();
 //

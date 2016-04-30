@@ -20,7 +20,7 @@ such as a page specific styesheets.
 
 @section('navigation')
   <a href="/">Home</a>
-  <a href="/wilcoIpsum">Text Generator</a>
+  <a href="/loremIpsum">Text Generator</a>
 @stop
 
 @section('content')
