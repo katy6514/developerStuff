@@ -1,42 +1,84 @@
-/*html {
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);
+html {
   position: relative;
   min-height: 100%;
 }
 body {
-  margin: 0 0 100px 0;
-}*/
+}
 
 header{
     position: fixed;
     top:0;
-    height: 200px;
+    height: 150px;
     text-align: center;
     width: 20%;
-    background-color: #666;
+    background-color: #F7F9F9;
+    padding:20px;
+}
+
+#site_logo{
+    font-family: 'Oswald', monospace;
+    text-decoration: none;
+    font-size: 42px;
+    color:#666;
 }
 
 nav{
     position: fixed;
-    top:200px;
+    top:150px;
     bottom:0;
     width:20%;
-    background-color: #666;
+    background-color: #F7F9F9;
 }
+
+nav .sidebar-links {
+	margin: 20px auto;
+}
+
+nav .sidebar-links a {
+    font-family: 'Cutive Mono',monospace;
+	display: block;
+	text-decoration: none;
+	margin: 0 auto 0px auto;
+	padding: 20px 0;
+	background-color: #35393e;
+	text-align: center;
+	color:  #F7F9F9;
+	font-size: 25px;
+}
+/* Link Colors */
+
+nav .sidebar-links a.link-blue {
+	background-color: #99D19C;
+	/*background-color: #BED8D4;*/
+}
+
+nav .sidebar-links a.link-red {
+	background-color: #73AB84;
+	/*background-color: #78D5D7;*/
+}
+
+nav .sidebar-links a.link-yellow {
+	background-color: #ADE1E5;
+	/*background-color: #63D2FF;*/
+}
+
+nav .sidebar-links a.link-green {
+	background-color: #79C7C5;
+	/*background-color: #2081C3;*/
+}
+
 
 main{
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:20%;
+    margin-left:20%;
+    padding:30px;
 }
 
-/*footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 80px;
-  width: 100%;
-  padding:10px;
-  text-align: right;
-  background-color: #222;
-}*/
+/* ------------------------------------------------
+    User Generator Styles
+------------------------------------------------ */
+
+.btn.btn-default.number_users {
+    font-size: 20px;
+    width:9.6%;
+}

@@ -29,12 +29,9 @@ class UserController extends Controller {
     }
 
     public function postIndex(Request $request) {
+        dump($request->input());
 
         $faker = Faker::create();
-
-        $this->validate($request,
-            ['num_users' => 'required|numeric|min:1|max:10']
-        );
 
         $num_users = $request->input('num_users');
 

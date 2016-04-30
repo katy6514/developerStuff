@@ -1,14 +1,5 @@
 @extends('_master')
 
-@section('header')
-  <h1>Developer's Stuff</h1>
-@stop
-
-@section('navigation')
-  <a href="/users">User Generator</a>
-  <a href="/loremIpsum">Text Generator</a>
-
-@stop
 
 
 @section('content')

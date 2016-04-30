@@ -36,19 +36,22 @@
 
 <!-- Toolbox logo? -->
 
-  <header>
-    @yield('header')
-  </header>
+    <header>
+        <a href="/"id="site_logo" >Developer's Toolbox</a>
+    </header>
 
-  <nav>
-    @yield('navigation')
-  </nav>
+    <nav>
+        <div class="sidebar-links">
+            <a class="link-blue" href="/users">Users</a>
+            <a class="link-red" href="/loremIpsum">Text</a>
+            <a class="link-yellow " href="#">Passwords</a>
+            <a class="link-green" href="#">htaccess</a>
+        </div>
+            &copy; {{ date('Y') }}
+    </nav>
 
 
   <main>
-
-
-
 
     <section>
         <!-- Main page content will be yielded here -->
@@ -56,11 +59,6 @@
     </section>
 
   </main>
-
-  <footer>
-      &copy; {{ date('Y') }}
-     @yield('footer')
-  </footer>
 
   <!-- Yield any page specific JS files or anything else you might want at the end of the body -->
   @yield('body')

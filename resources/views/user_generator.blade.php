@@ -1,69 +1,58 @@
 @extends('_master')
 
-@section('title')
-    User Generator
-@stop
-
-
-<!--
-This `head` section will be yielded right before the closing </head> tag.
-Use it to add specific things that *this* View needs in the head,
-such as a page specific styesheets.
--->
-<!-- @section('head')
-    <link href="/css/books/show.css" type='text/css' rel='stylesheet'>
-@stop -->
-
-@section('header')
-    <h1>User Generator Header</h1>
-@stop
-
-@section('navigation')
-  <a href="/">Home</a>
-  <a href="/loremIpsum">Text Generator</a>
-@stop
-
 @section('content')
 
 <div id="user_input">
-			@if(count($errors) > 0)
-		    @foreach ($errors->all() as $error)
-			    	<div class="alert alert-danger alert-dismissible fade in" role="alert">
-  						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  						{{ $error }}
-  					</div>
-				@endforeach
-			@endif
+    @if(count($errors) > 0)
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ $error }}
+            </div>
+        @endforeach
+    @endif
 
+    <h1> User Generator </h1>
 
-			<form method="POST" action="users">
+    <form method="POST" action="users">
 
-		    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
 
-		    <label for="num_users">Number of users (max 10)</label>
-		    <input type="number" id="num_users" name="num_users" class="form-control" min="1" max="10" value="<?php echo $formdata['num_users']; ?>" required>
+        <!-- <label for="num_users">Number of users (max 10)</label>
+        <input type="number" id="num_users" name="num_users" class="form-control" min="1" max="10" value="<?php echo $formdata['num_users']; ?>" required> -->
 
-				<div class="checkbox">
-			    <label>
-			      <input type="checkbox" <?php echo $formdata['address_yes']; ?> name="address"> Include a mailing address
-			    </label>
-			  </div>
+        <h3> Extra Features </h3>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" <?php echo $formdata['address_yes']; ?> name="address"> Include a mailing address
+            </label>
+        </div>
 
-		  	<div class="checkbox">
-			    <label>
-			      <input type="checkbox" <?php echo $formdata['phone_yes']; ?> name="phone"> Include a phone number
-			    </label>
-		  	</div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" <?php echo $formdata['phone_yes']; ?> name="phone"> Include a phone number
+            </label>
+        </div>
 
-		  	<div class="checkbox">
-			    <label>
-			      <input type="checkbox" <?php echo $formdata['photo_yes']; ?> name="photo"> Include a profile photo
-			    </label>
-		  	</div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" <?php echo $formdata['photo_yes']; ?> name="photo"> Include a profile photo
+            </label>
+        </div>
 
-				<button type="submit" class="btn btn-default">Show me the users!</button>
+        <h3> How many users? </h3>
+        <button type="submit" class="btn btn-default number_users" value="1" name="num_users">1</button>
+        <button type="submit" class="btn btn-default number_users" value="2" name="num_users">2</button>
+        <button type="submit" class="btn btn-default number_users" value="3" name="num_users">3</button>
+        <button type="submit" class="btn btn-default number_users" value="4" name="num_users">4</button>
+        <button type="submit" class="btn btn-default number_users" value="5" name="num_users">5</button>
+        <button type="submit" class="btn btn-default number_users" value="6" name="num_users">6</button>
+        <button type="submit" class="btn btn-default number_users" value="7" name="num_users">7</button>
+        <button type="submit" class="btn btn-default number_users" value="8" name="num_users">8</button>
+        <button type="submit" class="btn btn-default number_users" value="9" name="num_users">9</button>
+        <button type="submit" class="btn btn-default number_users" value="10" name="num_users">10</button>
 
-			</form>
+    </form>
 </div> <!-- close user input -->
 
 <div id="user_output">
