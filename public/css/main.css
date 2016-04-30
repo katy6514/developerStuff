@@ -1,0 +1,22 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 100px 0; /* bottom = footer height */
+}
+
+header{
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  padding:10px;
+  text-align: right;
+  background-color: #222;
+}
