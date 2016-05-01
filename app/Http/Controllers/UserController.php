@@ -29,7 +29,7 @@ class UserController extends Controller {
     }
 
     public function postIndex(Request $request) {
-        dump($request->input());
+        // dump($request->input());
 
         $faker = Faker::create();
 

@@ -82,3 +82,22 @@ main{
     font-size: 20px;
     width:9.6%;
 }
+
+.user{
+    padding: 20px;
+    text-align: center;
+    width:250px;
+    height: auto;
+    background-color: #e2e9e9;
+    float:left;
+    margin:10px;
+}
+
+.user .name{
+    padding-top: 10px;
+    font-size: 150%;
+}
+
+.user .email{
+    font-size:120%;
+}

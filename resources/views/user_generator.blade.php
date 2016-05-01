@@ -57,44 +57,45 @@
 
 <div id="user_output">
 
-			@if(isset($users))
-				<div class="users">
-				<p>
-					<!-- Download results as:
-					<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
-					<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a> -->
-				</p>
-		        	@foreach($users as $user)
-		        		<div class="user">
-	        				@if(isset($user['photo']))
-		        				<div class="profilepic">
-									<img class="profilepic" src="{{ $user['photo']}}" alt="profile pic">
-								</div>
-								<div class="userinfo-pic">
-							@else
-								<div class="userinfo-nopic">
-	        				@endif
+	@if(isset($users))
+		<div class="users">
+        	<p>
+        		<!-- Download results as:
+        		<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
+        		<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a> -->
+        	</p>
 
-					        		<p class="username">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
-					        		@if(isset($user['profile']))
-					        			<p class="profile">{{ $user['profile']}}</p>
-					        		@endif
-					        		<p>{{ $user['email'] }}</p>
-					        		@if(isset($user['birthday']))
-					        			<p>{{ $user['birthday'] }}</p>
-					        		@endif
-					        		@if(isset($user['streetaddress']))
-					        			<p>{{ $user['streetaddress'] }}<br>
-					        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
-					        		@endif
-					        		@if(isset($user['phone']))
-					        			<p>{{ $user['phone']}}</p>
-					        		@endif
-					        	</div>
-		        		</div>
-	        		@endforeach
-		    	</div>
-		    @endif
+        	@foreach($users as $user)
+        		<div class="user">
+    				@if(isset($user['photo']))
+        				<div class="profilepic">
+							<img class="profilepic" src="{{ $user['photo']}}" alt="profile pic">
+						</div>
+						<div class="userinfo-pic">
+					@else
+						<div class="userinfo-nopic">
+    				@endif
+			        		<p class="name">{{ $user['name'] }}</p>
+                            <p class="username">@ {{ $user['username'] }}</p>
+			        		<p class="email">{{ $user['email'] }}</p>
+
+			        		@if(isset($user['birthday']))
+			        			<p class="birthday">{{ $user['birthday'] }}</p>
+			        		@endif
+
+			        		@if(isset($user['streetaddress']))
+			        			<p class="address">{{ $user['streetaddress'] }}<br>
+			        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
+			        		@endif
+
+			        		@if(isset($user['phone']))
+			        			<p class="phone">{{ $user['phone']}}</p>
+			        		@endif
+			        	</div>
+        		</div>
+    		@endforeach
+    	</div>
+    @endif
 
 </div> <!-- close user input -->
     <!-- @if (isset($name))
