@@ -70,10 +70,11 @@ class UserController extends Controller {
 
         // $jsonpath = public_path();
         // $jsonpath .= '/downloads/randomusers.json';
+        // echo $jsonpath;
         // $json = fopen($jsonpath, 'w');
         // fwrite($json, json_encode($users));
         // fclose($json);
-        //
+
         // $csv = new \SplFileObject('downloads/randomusers.csv', 'w');
         // foreach ($users as $user) {
         //     $csv->fputcsv($user);

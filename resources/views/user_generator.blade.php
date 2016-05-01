@@ -59,11 +59,6 @@
 
 	@if(isset($users))
 		<div class="users">
-        	<p>
-        		<!-- Download results as:
-        		<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
-        		<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a> -->
-        	</p>
 
         	@foreach($users as $user)
         		<div class="user">
@@ -95,6 +90,12 @@
         		</div>
     		@endforeach
     	</div>
+        <div id="get_results">
+        	<p>Download results as:<br>
+        		<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
+        		<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a>
+        	</p>
+        </div>
     @endif
 
 </div> <!-- close user input -->
