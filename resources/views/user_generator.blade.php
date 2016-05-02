@@ -13,13 +13,11 @@
     @endif
 
     <h1> User Generator </h1>
+    <div id="users_color_bar"></div>
 
     <form method="POST" action="users">
 
         <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
-
-        <!-- <label for="num_users">Number of users (max 10)</label>
-        <input type="number" id="num_users" name="num_users" class="form-control" min="1" max="10" value="<?php echo $formdata['num_users']; ?>" required> -->
 
         <h3> Extra Features </h3>
         <div class="checkbox">
@@ -63,20 +61,16 @@
         	@foreach($users as $user)
         		<div class="user">
     				@if(isset($user['photo']))
-        				<div class="profilepic">
-							<img class="profilepic" src="{{ $user['photo']}}" alt="profile pic">
-						</div>
 						<div class="userinfo-pic">
+            				<div class="userpic">
+    							<img class="userpic" src="{{ $user['photo']}}" alt="profile pic">
+    						</div>
 					@else
 						<div class="userinfo-nopic">
     				@endif
 			        		<p class="name">{{ $user['name'] }}</p>
-                            <p class="username">@ {{ $user['username'] }}</p>
+                            <p class="username">{{ $user['username'] }}</p>
 			        		<p class="email">{{ $user['email'] }}</p>
-
-			        		@if(isset($user['birthday']))
-			        			<p class="birthday">{{ $user['birthday'] }}</p>
-			        		@endif
 
 			        		@if(isset($user['streetaddress']))
 			        			<p class="address">{{ $user['streetaddress'] }}<br>
@@ -90,7 +84,7 @@
         		</div>
     		@endforeach
     	</div>
-        <div id="get_results">
+        <div id="get_results_buttons">
         	<p>Download results as:<br>
         		<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
         		<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a>

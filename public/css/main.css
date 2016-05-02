@@ -1,8 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);
+
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
 }
 
@@ -12,7 +20,7 @@ header{
     height: 150px;
     text-align: center;
     width: 20%;
-    background-color: #F7F9F9;
+    background-color: #f0f4f4;
     padding:20px;
 }
 
@@ -28,7 +36,7 @@ nav{
     top:150px;
     bottom:0;
     width:20%;
-    background-color: #F7F9F9;
+    background-color: #f0f4f4;
 }
 
 nav .sidebar-links {
@@ -48,22 +56,22 @@ nav .sidebar-links a {
 }
 /* Link Colors */
 
-nav .sidebar-links a.link-blue {
+nav .sidebar-links a.link-users {
 	background-color: #99D19C;
 	/*background-color: #BED8D4;*/
 }
 
-nav .sidebar-links a.link-red {
+nav .sidebar-links a.link-text {
 	background-color: #73AB84;
 	/*background-color: #78D5D7;*/
 }
 
-nav .sidebar-links a.link-yellow {
+nav .sidebar-links a.link-password {
 	background-color: #ADE1E5;
 	/*background-color: #63D2FF;*/
 }
 
-nav .sidebar-links a.link-green {
+nav .sidebar-links a.link-htaccess {
 	background-color: #79C7C5;
 	/*background-color: #2081C3;*/
 }
@@ -73,7 +81,16 @@ main{
     margin-left:20%;
     padding:30px;
     max-width: 1100px;
-    overflow: hidden;}
+    overflow: hidden;
+}
+
+
+#users_color_bar{
+	background-color: #99D19C;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+}
 
 /* ------------------------------------------------
     User Generator Styles
@@ -84,14 +101,25 @@ main{
     width:9.6%;
 }
 
+#user_input{
+    clear:both;
+}
+
 #user_output{
     padding-top: 20px;
     width: 100%;
     overflow: hidden;
 }
 
-#get_results{
+#get_results_buttons{
+    width: 20%;
+    float: left;
     text-align: center;
+}
+
+#get_results_buttons .btn.btn-default{
+	background-color: #b9dfbb;
+    border-color: #99d19c;
 }
 
 .users{
@@ -100,20 +128,40 @@ main{
 }
 
 .user{
+}
+
+.userinfo-pic, .userinfo-nopic{
     padding: 20px;
-    text-align: center;
-    width:250px;
+    margin-bottom: 10px;
     height: auto;
-    background-color: #e2e9e9;
+    overflow: auto;
+    text-align: left;
+    background-color: #f0f4f4;
+
+}
+
+.userinfo-pic{
+    width:100%;
+}
+
+.userinfo-nopic{
+    width:48%;
+    margin-right: 10px;
     float:left;
-    margin:10px;
+}
+
+.userpic{
+    float:left;
+    margin-right: 10px;
 }
 
 .user .name{
-    padding-top: 10px;
-    font-size: 150%;
+    font-size: 170%;
+}
+.user .username{
+    font-size: 110%;
 }
 
 .user .email{
-    font-size:120%;
+    font-size:130%;
 }

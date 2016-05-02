@@ -42,10 +42,10 @@
 
     <nav>
         <div class="sidebar-links">
-            <a class="link-blue" href="/users">Users</a>
-            <a class="link-red" href="/loremIpsum">Text</a>
-            <a class="link-yellow " href="#">Passwords</a>
-            <a class="link-green" href="#">htaccess</a>
+            <a class="link-users" href="/users">Users</a>
+            <a class="link-text" href="/loremIpsum">Text</a>
+            <a class="link-password" href="#">Passwords</a>
+            <a class="link-htaccess" href="#">htaccess</a>
         </div>
             &copy; {{ date('Y') }}
     </nav>

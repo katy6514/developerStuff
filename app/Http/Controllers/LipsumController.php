@@ -21,7 +21,7 @@ class LipsumController extends Controller {
     * Responds to requests to GET /users
     */
     public function getIndex() {
-      return view('wilco_ipsum')->with('formdata',$this->formdata);
+      return view('lorem_ipsum')->with('formdata',$this->formdata);
       // return 'List all the users';
     }
 
@@ -49,7 +49,7 @@ class LipsumController extends Controller {
       //   foreach ($users as $user) {
       //       $csv->fputcsv($user);
       //   }
-        return view('wilco_ipsum')->with('paragraphs', $paragraphs)->with('formdata', $this->formdata);
+        return view('lorem_ipsum')->with('paragraphs', $paragraphs)->with('formdata', $this->formdata);
 
 
 

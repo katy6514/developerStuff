@@ -52,8 +52,17 @@ class UserController extends Controller {
 
         for ($i = 0; $i < $num_users; $i++) {
             $users[$i]['name'] = $faker->name;
-            $users[$i]['username'] = $faker->username;
-            $users[$i]['email'] = $faker->email;
+            $users[$i]['username'] = "@".$faker->username;
+            if ($i % 2 == 0) {
+                $fname = $faker->firstName;
+                $lname = $faker->lastName;
+                $email = strtolower(substr($fname,0,1)).$lname."@".$faker->freeEmailDomain;
+
+                $users[$i]['name'] = $fname." ".$lname;
+                $users[$i]['email'] = $email;
+            } else {
+                $users[$i]['email'] = $faker->email;
+            }
             if ($address == 'on') {
                 $users[$i]['streetaddress'] = $faker->streetAddress;
                 $users[$i]['city'] = $faker->city;
@@ -68,17 +77,16 @@ class UserController extends Controller {
             }
         }
 
-        // $jsonpath = public_path();
-        // $jsonpath .= '/downloads/randomusers.json';
-        // echo $jsonpath;
-        // $json = fopen($jsonpath, 'w');
-        // fwrite($json, json_encode($users));
-        // fclose($json);
+        $jsonpath = public_path();
+        $jsonpath .= '/downloads/randomusers.json';
+        $json = fopen($jsonpath, 'w');
+        fwrite($json, json_encode($users));
+        fclose($json);
 
-        // $csv = new \SplFileObject('downloads/randomusers.csv', 'w');
-        // foreach ($users as $user) {
-        //     $csv->fputcsv($user);
-        // }
+        $csv = new \SplFileObject('downloads/randomusers.csv', 'w');
+        foreach ($users as $user) {
+            $csv->fputcsv($user);
+        }
 
         return view('user_generator')->with('users', $users)->with('formdata', $this->formdata);
 
