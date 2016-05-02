@@ -30,61 +30,20 @@ Route::get('/practice', function() {
 
 });
 
-// Route::get('/new', function() {
-//
-//     $view  = '<form method="POST">';
-//     $view .= csrf_field(); # This will be explained more later
-//     $view .= 'Title: <input type="text" name="title">';
-//     $view .= '<input type="submit">';
-//     $view .= '</form>';
-//     return $view;
-//
-// });
-//
-// Route::post('/new', function() {
-//
-//     $input =  Input::all();
-//     print_r($input);
-//
-// });
-//
-// Route::get('/book/create',function() {
-//   return view('book');
-// });
-//
-// Route::post('/books/create', function() {
-//   return 'Process adding new book'.$_POST['title'];
-// });
 
 
 Route::get('/', function() {
   return view('index');
 });
+
 Route::get('/users', 'UserController@getIndex');
 Route::post('/users', 'UserController@postIndex');
 Route::get('/loremIpsum', 'LipsumController@getIndex');
 Route::post('/loremIpsum', 'LipsumController@postIndex');
-// Route::get('/user', function() {
-//   $faker = Faker\Factory::create();
-//
-//   // generate data by accessing properties
-//   $name =  $faker->name;
-//     // 'Lucy Cechtelar';
-//   $address =  $faker->address;
-//     return view('user_generator')->with('name', $name);
-//
-// });
 
-// Route::get('/wilcoIpsum', function() {
-//
-//     $view  = '<form method="POST">';
-//     $view .= csrf_field(); # This will be explained more later
-//     $view .= 'Paragraphs?: <input type="text" name="num_par">';
-//     $view .= '<input type="submit">';
-//     $view .= '</form>';
-//     return $view;
-//
-// });
+Route::get('/password','PasswordController@getIndex');
+
+
 
 //Route::post('/wilcoIpsum', function() {
 // $generator = new Badcow\LoremIpsum\Generator();

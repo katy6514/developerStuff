@@ -1,8 +1,8 @@
 @extends('_master')
 
-@section('pw_generator')
+@section('content')
 
-<!-- add in XKCD password generator -->
+add in XKCD password generator
 
 
 

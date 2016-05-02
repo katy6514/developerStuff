@@ -18,11 +18,18 @@
     <form method="POST" action="loremIpsum">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-        <label for="num_paragraphs">Number of paragraphs (max 10)</label>
-        <input type="number" id="num_paragraphs" name="num_paragraphs" class="form-control" min="1" max="10" value="<?php echo $formdata['num_paragraphs']; ?>" required>
+        <h3> How many paragraphs? </h3>
+        <button type="submit" class="btn btn-default number_choice" value="1" name="num_paragraphs">1</button>
+        <button type="submit" class="btn btn-default number_choice" value="2" name="num_paragraphs">2</button>
+        <button type="submit" class="btn btn-default number_choice" value="3" name="num_paragraphs">3</button>
+        <button type="submit" class="btn btn-default number_choice" value="4" name="num_paragraphs">4</button>
+        <button type="submit" class="btn btn-default number_choice" value="5" name="num_paragraphs">5</button>
+        <button type="submit" class="btn btn-default number_choice" value="6" name="num_paragraphs">6</button>
+        <button type="submit" class="btn btn-default number_choice" value="7" name="num_paragraphs">7</button>
+        <button type="submit" class="btn btn-default number_choice" value="8" name="num_paragraphs">8</button>
+        <button type="submit" class="btn btn-default number_choice" value="9" name="num_paragraphs">9</button>
+        <button type="submit" class="btn btn-default number_choice" value="10" name="num_paragraphs">10</button>
 
-
-        <button type="submit" class="btn btn-default">Show me the text!</button>
 
     </form>
 </div> <!-- close user input -->
@@ -37,12 +44,6 @@
         </div>
     @endif
 
-</div> <!-- close user input -->
-    <!-- @if (isset($name))
-        <h2>Generated User: </h2>
-				<p>Name: {{ $name }}</p>
-    @else
-        <h2>No book chosen bladdddeeee!</h2>
-    @endif -->
+</div>
 
 @stop

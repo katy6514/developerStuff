@@ -39,16 +39,16 @@
         </div>
 
         <h3> How many users? </h3>
-        <button type="submit" class="btn btn-default number_users" value="1" name="num_users">1</button>
-        <button type="submit" class="btn btn-default number_users" value="2" name="num_users">2</button>
-        <button type="submit" class="btn btn-default number_users" value="3" name="num_users">3</button>
-        <button type="submit" class="btn btn-default number_users" value="4" name="num_users">4</button>
-        <button type="submit" class="btn btn-default number_users" value="5" name="num_users">5</button>
-        <button type="submit" class="btn btn-default number_users" value="6" name="num_users">6</button>
-        <button type="submit" class="btn btn-default number_users" value="7" name="num_users">7</button>
-        <button type="submit" class="btn btn-default number_users" value="8" name="num_users">8</button>
-        <button type="submit" class="btn btn-default number_users" value="9" name="num_users">9</button>
-        <button type="submit" class="btn btn-default number_users" value="10" name="num_users">10</button>
+        <button type="submit" class="btn btn-default number_choice" value="1" name="num_users">1</button>
+        <button type="submit" class="btn btn-default number_choice" value="2" name="num_users">2</button>
+        <button type="submit" class="btn btn-default number_choice" value="3" name="num_users">3</button>
+        <button type="submit" class="btn btn-default number_choice" value="4" name="num_users">4</button>
+        <button type="submit" class="btn btn-default number_choice" value="5" name="num_users">5</button>
+        <button type="submit" class="btn btn-default number_choice" value="6" name="num_users">6</button>
+        <button type="submit" class="btn btn-default number_choice" value="7" name="num_users">7</button>
+        <button type="submit" class="btn btn-default number_choice" value="8" name="num_users">8</button>
+        <button type="submit" class="btn btn-default number_choice" value="9" name="num_users">9</button>
+        <button type="submit" class="btn btn-default number_choice" value="10" name="num_users">10</button>
 
     </form>
 </div> <!-- close user input -->

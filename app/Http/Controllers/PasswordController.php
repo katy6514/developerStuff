@@ -5,9 +5,8 @@ namespace DeveloperStuff\Http\Controllers;
 use DeveloperStuff\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use \Badcow\LoremIpsum\Generator;
 
-class LipsumController extends Controller {
+class PasswordController extends Controller {
 
     public function __construct() {
         # Put anything here that should happen before any of the other actions
@@ -17,13 +16,8 @@ class LipsumController extends Controller {
         'num_paragraphs' => '',
     ];
 
-    /**
-    * Responds to requests to GET /users
-    */
     public function getIndex() {
-        return view('lorem_ipsum')
-            ->with('formdata',$this->formdata);
-      // return 'List all the users';
+        return view('pw_generator');
     }
 
     public function postIndex(Request $request) {

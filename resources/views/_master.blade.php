@@ -44,7 +44,7 @@
         <div class="sidebar-links">
             <a class="link-users" href="/users">Users</a>
             <a class="link-text" href="/loremIpsum">Text</a>
-            <a class="link-password" href="#">Passwords</a>
+            <a class="link-password" href="/password">Passwords</a>
             <a class="link-htaccess" href="#">htaccess</a>
         </div>
             &copy; {{ date('Y') }}

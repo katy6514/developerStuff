@@ -92,17 +92,28 @@ main{
     border-radius: 3px;
 }
 
+#text_color_bar{
+	background-color: #73AB84;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+}
+
 /* ------------------------------------------------
     User Generator Styles
 ------------------------------------------------ */
 
-.btn.btn-default.number_users {
+.btn.btn-default.number_choice {
     font-size: 20px;
     width:9.6%;
 }
 
 #user_input{
     clear:both;
+}
+
+#text_output{
+    padding-top:20px;
 }
 
 #user_output{
