@@ -1,4 +1,15 @@
+/*-------------------------------------------------------------
+---------------------------------------------------------------
+    Developer's Toolbox
+    Simple development tools by Katherine Wyman
+-------------------------------------------------------------
+------------------------------------------------------------- */
+
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);
+
+/* ---------------------------------------
+    Main Structure
+--------------------------------------- */
 
 *, *:before, *:after {
 -webkit-box-sizing: border-box;
@@ -14,6 +25,9 @@ html {
 body {
 }
 
+/* ---------------------------------------
+    Header
+--------------------------------------- */
 header{
     position: fixed;
     top:0;
@@ -30,6 +44,10 @@ header{
     font-size: 42px;
     color:#666;
 }
+
+/* ---------------------------------------
+    Navigation
+--------------------------------------- */
 
 nav{
     position: fixed;
@@ -77,6 +95,9 @@ nav .sidebar-links a.link-htaccess {
 }
 
 
+/* ---------------------------------------
+    General Page Content
+--------------------------------------- */
 main{
     margin-left:20%;
     padding:30px;
@@ -84,6 +105,22 @@ main{
     overflow: hidden;
 }
 
+.btn.btn-default.number_choice {
+    font-size: 20px;
+    width:9.6%;
+}
+
+.btn.btn-default.memorable_choice {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width:auto;
+}
+
+
+/* ------------------------------------------------
+    User Generator Styles
+------------------------------------------------ */
 
 #users_color_bar{
 	background-color: #99D19C;
@@ -92,29 +129,7 @@ main{
     border-radius: 3px;
 }
 
-#text_color_bar{
-	background-color: #73AB84;
-    width: 100%;
-    height: 7px;
-    border-radius: 3px;
-}
-
-/* ------------------------------------------------
-    User Generator Styles
------------------------------------------------- */
-
-.btn.btn-default.number_choice {
-    font-size: 20px;
-    width:9.6%;
-}
-
-#user_input{
-    clear:both;
-}
-
-#text_output{
-    padding-top:20px;
-}
+#user_input{clear:both;}
 
 #user_output{
     padding-top: 20px;
@@ -133,13 +148,7 @@ main{
     border-color: #99d19c;
 }
 
-.users{
-    width: 80%;
-    float:left;
-}
-
-.user{
-}
+.users{width: 80%;float:left;}
 
 .userinfo-pic, .userinfo-nopic{
     padding: 20px;
@@ -150,29 +159,78 @@ main{
     background-color: #f0f4f4;
 
 }
-
-.userinfo-pic{
-    width:100%;
-}
-
+.userinfo-pic{width:100%;}
 .userinfo-nopic{
     width:48%;
     margin-right: 10px;
     float:left;
 }
 
-.userpic{
-    float:left;
-    margin-right: 10px;
+.userpic{float:left; margin-right: 10px;}
+
+.user .name{font-size: 170%;}
+.user .username{font-size: 110%;}
+.user .email{font-size:130%;}
+
+
+/* ------------------------------------------------
+    Text Generator Styles
+------------------------------------------------ */
+
+#text_color_bar{
+	background-color: #73AB84;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
 }
 
-.user .name{
-    font-size: 170%;
-}
-.user .username{
-    font-size: 110%;
+#text_output{
+    padding-top:20px;
 }
 
-.user .email{
-    font-size:130%;
+
+/* ------------------------------------------------
+    Password Generator Styles
+------------------------------------------------ */
+
+#password_color_bar{
+	background-color: #ADE1E5;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+}
+
+#password_output{
+    padding-top:20px;
+    width: 100%;
+}
+
+#password_output img{
+    display: block;
+    margin: 10px auto;
+    width: 600px;
+}
+
+#password{
+    text-align: center;
+}
+
+#password p{
+    width: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 36px;
+    background-color: #d8f1f3;
+}
+
+/* ------------------------------------------------
+    HTaccess Generator Styles
+------------------------------------------------ */
+#htaccess_color_bar{
+	background-color: #79C7C5;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
 }

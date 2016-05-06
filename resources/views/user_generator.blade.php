@@ -92,26 +92,5 @@
         </div>
     @endif
 
-</div> <!-- close user input -->
-    <!-- @if (isset($name))
-        <h2>Generated User: </h2>
-				<p>Name: {{ $name }}</p>
-    @else
-        <h2>No book chosen bladdddeeee!</h2>
-    @endif -->
-@stop
-
-
-<!--
-This `body` section will be yielded right before the closing </body> tag.
-Use it to add specific things that *this* View needs at the end of the body,
-such as a page specific JavaScript files.
--->
-@section('body')
-    <script src="/js/books/show.js"></script>
-@stop
-
-
-@section('footer')
-    <h5>Footer!</h5>
+</div> <!-- close user output -->
 @stop

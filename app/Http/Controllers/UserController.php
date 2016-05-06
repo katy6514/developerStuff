@@ -24,7 +24,8 @@ class UserController extends Controller {
     * Responds to requests to GET /users
     */
     public function getIndex() {
-        return view('user_generator')->with('formdata',$this->formdata);
+        return view('user_generator')
+            ->with('formdata',$this->formdata);
         // return 'List all the users';
     }
 
