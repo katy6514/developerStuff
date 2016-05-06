@@ -57,6 +57,8 @@
     </div>
 
     {!! HTML::image('img/password_strength.png') !!}
+    {!! HTML::link('http://xkcd.com/936/') !!}
+
 
 </div> <!-- close password output -->
 

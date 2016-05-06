@@ -207,8 +207,13 @@ main{
 
 #password_output img{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto 0px auto;
     width: 600px;
+}
+
+#password_output a{
+    display: block;
+    text-align: center;
 }
 
 #password{
