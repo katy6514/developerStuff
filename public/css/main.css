@@ -25,6 +25,14 @@ html {
 body {
 }
 
+.right_align{
+    text-align: right;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 /* ---------------------------------------
     Header
 --------------------------------------- */
@@ -282,11 +290,60 @@ a.tile:hover i {
 }
 
 /* ------------------------------------------------
-    HTaccess Generator Styles
+    HTpassword Generator Styles
 ------------------------------------------------ */
-#htaccess_color_bar{
+#htpassword_color_bar{
 	background-color: #79C7C5;
     width: 100%;
     height: 7px;
     border-radius: 3px;
+}
+
+#ht_input table{
+    margin-bottom: 20px;
+}
+
+#ht_input table td{
+    width: 300px;
+    padding-top: 10px;
+}
+
+#ht_input table tr td:first-child{
+    width: 80px;
+}
+
+#ht_input input {
+
+}
+
+#ht_output{
+    padding-top:20px;
+}
+
+#ht_output h4{
+font-family: 'Cutive Mono', monospace;
+}
+
+#ht_result{
+    text-align: center;
+    width: 100%;
+}
+
+#ht_result p{
+    width: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 22px;
+    background-color: #b7e1e0;
+}
+
+.ht_files{
+    background-color: #EEE;
+    font-family: 'Cutive Mono', monospace;
+    color: #666;
+    padding: 10px;
+    font-size: 12px;
+    height: 180px;
 }

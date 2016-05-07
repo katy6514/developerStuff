@@ -44,68 +44,68 @@ class PasswordController extends Controller {
 
     public function postIndex(Request $request) {
 
-    $num_words = $request->input('num_words');
+        $num_words = $request->input('num_words');
 
-    $symbol = $request->input('symbol');
-    if ($symbol == 'on') {
-        $this->formdata['symbol_yes'] = 'checked';
-    }
+        $symbol = $request->input('symbol');
+        if ($symbol == 'on') {
+            $this->formdata['symbol_yes'] = 'checked';
+        }
 
-    $number = $request->input('number');
-    if ($number == 'on') {
-        $this->formdata['number_yes'] = 'checked';
-    }
-
-
-    $word_list = Storage::get('words.txt');
-    // $trimmed = trim($word_list,'\n');
-    $words = preg_split("/[\s,]+/", $word_list);
-    $word_list_length = count($words);
+        $number = $request->input('number');
+        if ($number == 'on') {
+            $this->formdata['number_yes'] = 'checked';
+        }
 
 
+        $word_list = Storage::get('words.txt');
+        // $trimmed = trim($word_list,'\n');
+        $words = preg_split("/[\s,]+/", $word_list);
+        $word_list_length = count($words);
 
-    $special_char = array("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?");
-    $random_special_char = $special_char[rand(0,count($special_char)-1)];
 
-    // generate the password
-    $password = "";
 
-    if ($num_words == 'memorable') {
-        $adjective = $this->adjectives[rand(0, (count($this->adjectives) - 1))];
-        $noun = $this->nouns[rand(0, (count($this->nouns) - 1))];
-        $verb = $this->verbs[rand(0, (count($this->verbs) - 1))];
-        $adverb = $this->adverbs[rand(0, (count($this->adverbs) - 1))];
+        $special_char = array("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?");
+        $random_special_char = $special_char[rand(0,count($special_char)-1)];
 
-        $password = $adjective . " " . $noun . " " .$verb . " " . $adverb;
+        // generate the password
+        $password = "";
 
-    } else {
-        for ($i=0; $i < $num_words; $i++) {
-            $word_index = rand(0,$word_list_length);
-            // dump($word_index);
-            $new_word = trim($words[$word_index]);
+        if ($num_words == 'memorable') {
+            $adjective = $this->adjectives[rand(0, (count($this->adjectives) - 1))];
+            $noun = $this->nouns[rand(0, (count($this->nouns) - 1))];
+            $verb = $this->verbs[rand(0, (count($this->verbs) - 1))];
+            $adverb = $this->adverbs[rand(0, (count($this->adverbs) - 1))];
 
-            if ($i < $num_words-1) {
-                $password .= $new_word." ";
-            } else {
-                $password .= $new_word;
+            $password = $adjective . " " . $noun . " " .$verb . " " . $adverb;
+
+        } else {
+            for ($i=0; $i < $num_words; $i++) {
+                $word_index = rand(0,$word_list_length);
+                // dump($word_index);
+                $new_word = trim($words[$word_index]);
+
+                if ($i < $num_words-1) {
+                    $password .= $new_word." ";
+                } else {
+                    $password .= $new_word;
+                }
             }
         }
-    }
 
-    if ($symbol == "on") {
-        $password .= $random_special_char;
-    }
+        if ($symbol == "on") {
+            $password .= $random_special_char;
+        }
 
-    if ($number == "on") {
-        $password .= rand(0,9);
-    }
+        if ($number == "on") {
+            $password .= rand(0,9);
+        }
 
 
-    // $password = "cats".$num_words;
+        // $password = "cats".$num_words;
 
-    return view('pw_generator')
-        ->with('password', $password)
-        ->with('formdata', $this->formdata);
+        return view('pw_generator')
+            ->with('password', $password)
+            ->with('formdata', $this->formdata);
 
 
 

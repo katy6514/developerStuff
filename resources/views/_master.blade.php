@@ -45,7 +45,7 @@
             <a class="link-users" href="/users">Users</a>
             <a class="link-text" href="/loremIpsum">Text</a>
             <a class="link-password" href="/password">Passwords</a>
-            <a class="link-htaccess" href="#">htaccess</a>
+            <a class="link-htaccess" href="/htpassword">htaccess</a>
         </div>
             &copy; {{ date('Y') }}
     </nav>

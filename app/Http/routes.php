@@ -40,3 +40,6 @@ Route::post('/loremIpsum', 'LipsumController@postIndex');
 
 Route::get('/password','PasswordController@getIndex');
 Route::post('/password', 'PasswordController@postIndex');
+
+Route::get('/htpassword','HTpasswordController@getIndex');
+Route::post('/htpassword', 'HTpasswordController@postIndex');

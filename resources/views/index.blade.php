@@ -27,7 +27,7 @@
 </div>
 
 <div class='index_box' id='htaccess_box'>
-    <a class="tile" href='#'>
+    <a class="tile" href='htpassword'>
         <i class="fa fa-lock fa-5x" aria-hidden="true"></i>
         <h2>HTaccess Generator</h2>
     </a>

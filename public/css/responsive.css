@@ -36,6 +36,10 @@
     zoom:1; /* For IE 6/7 */
 }
 
+/*  GRID OF TWO  */
+.span_2_of_2 {width: 100%;}
+.span_1_of_2 {width: 49.2%;}
+
 /*  GRID OF THREE  */
 .span_3_of_3 { width: 100%; }
 .span_2_of_3 { width: 66.1%; }
@@ -107,7 +111,13 @@ and (max-width : 655px)
 
 
 @media only screen
-and (max-width: 450px){
+and (max-width: 480px){
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+	.span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 { width: 100%; }
 
 }
 
