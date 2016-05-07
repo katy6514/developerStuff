@@ -53,10 +53,10 @@
 
   <main>
 
-    <section>
+    <!-- <section> -->
         <!-- Main page content will be yielded here -->
         @yield('content')
-    </section>
+    <!-- </section> -->
 
   </main>
 

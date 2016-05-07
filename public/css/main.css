@@ -117,6 +117,57 @@ main{
     width:auto;
 }
 
+/* ---------------------------------------
+    Home Page
+--------------------------------------- */
+.index_box{
+    text-align: center;
+    width: 50%;
+    float:left;
+}
+
+
+#user_box{background-color: #99D19C;}
+#text_box{background-color: #73AB84;}
+#password_box{background-color: #ADE1E5;}
+#htaccess_box{background-color: #79C7C5;}
+
+i{
+    color: #fff;
+    margin-top: 20px;
+}
+
+.tile h2{
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Cutive Mono';
+}
+
+a.tile {
+	display: block;
+	padding: 20px 90px;
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    float:left;
+}
+
+a.tile:hover {
+	background: #EEE;
+	text-decoration: none;
+}
+
+a.tile p, a.tile p:hover {
+	color: #333333;
+}
+
+a.tile:hover h2 {
+	color: #5D5F71;
+}
+a.tile:hover i {
+	color: #BF8B85;
+}
 
 /* ------------------------------------------------
     User Generator Styles
