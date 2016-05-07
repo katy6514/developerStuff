@@ -80,6 +80,8 @@ nav .sidebar-links a {
 	color:  #F7F9F9;
 	font-size: 25px;
 }
+
+
 /* Link Colors */
 
 nav .sidebar-links a.link-users {
@@ -102,6 +104,9 @@ nav .sidebar-links a.link-htaccess {
 	/*background-color: #2081C3;*/
 }
 
+nav .sidebar-links a:hover {
+    background-color: #BF8B85;
+}
 
 /* ---------------------------------------
     General Page Content
