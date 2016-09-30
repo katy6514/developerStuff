@@ -13,7 +13,7 @@
         @endforeach
     @endif
 
-    <h1> XKCD Password Generator </h1>
+    <h1> XKCD-style Password Generator </h1>
     <div id="password_color_bar"></div>
 
     <form method="POST" action="password">
@@ -34,11 +34,12 @@
         </div>
 
         <h3> How many words? </h3>
-        <button type="submit" class="btn btn-default number_choice" value="1" name="num_words">1</button>
         <button type="submit" class="btn btn-default number_choice" value="2" name="num_words">2</button>
         <button type="submit" class="btn btn-default number_choice" value="3" name="num_words">3</button>
         <button type="submit" class="btn btn-default number_choice" value="4" name="num_words">4</button>
+        <button type="submit" class="btn btn-default number_choice" value="5" name="num_words">5</button>
         <button type="submit" class="btn btn-default memorable_choice" value="memorable" name="num_words">Grammatically correct 4</button>
+        <!-- <a href="/furiosaPassword" class="btn btn-default memorable_choice">FANG IT</a> -->
 
 
 

@@ -41,5 +41,8 @@ Route::post('/loremIpsum', 'LipsumController@postIndex');
 Route::get('/password','PasswordController@getIndex');
 Route::post('/password', 'PasswordController@postIndex');
 
+Route::get('/furiosaPassword','FuriosaController@getIndex');
+Route::post('/furiosaPassword', 'FuriosaController@postIndex');
+
 Route::get('/htpassword','HTpasswordController@getIndex');
 Route::post('/htpassword', 'HTpasswordController@postIndex');

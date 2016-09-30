@@ -20,14 +20,6 @@
 
         <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
 
-        <h3>Preferred Encryption Type:</h3>
-        <div class="encryption_choices">
-            <input type="radio" name="encryption" value='pw_hash' checked> The system's password_hash() routine<br>
-            <input type="radio" name="encryption" value='pw_bcrypt'> bcrypt<br>
-            <input type="radio" name="encryption" value='pw_md5'> MD5<br>
-            <input type="radio" name="encryption" value='pw_sha256'> SHA-256<br>
-        </div>
-
         <h3> Enter your desired credentials: </h3>
 
         <table>
@@ -61,11 +53,7 @@
             <div class="section group">
                 <div class='col span_2_of_2'>
                     <h3>Drop these two files into the directory you wish to password-protect:</h3>
-                </div>
-            </div>
 
-            <div class="section group">
-                <div class='col span_1_of_2'>
                     <h4>.htaccess</h4>
                     <div class="ht_files">
                         AuthType Basic<br>
@@ -73,14 +61,13 @@
                         AuthUserFile /path/to/the/directory/you/are/protecting/.htpasswd<br>
                         require valid-user<br>
                     </div>
-                </div>
 
-                <div class='col span_1_of_2'>
                     <h4>.htpasswd</h4>
                     <div class="ht_files">
                         <p>{{$ht_pair}}</p>
                     </div>
                     <p class="right_align">Add additional authorized username/password combos as new lines to this file</p>
+                    <p>Password generated with <code><a href="http://php.net/manual/en/function.crypt.php" target="_blank">bcrypt</a></code>. <a href="https://codahale.com/how-to-safely-store-a-password/" target="_blank">How To Safely Store A Password</a>.</p>
                 </div>
             </div>
 

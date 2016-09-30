@@ -35,21 +35,10 @@ class HTpasswordController extends Controller {
         $password_in = $request->input('htpassword');
         $encryption_type = $request->input('encryption');
 
-        // $password_hashed = crypt($password_in, '$1$8hcR1Ck3$');
-        if ($encryption_type == 'pw_hash') {
-            $password_hashed = password_hash($password_in, PASSWORD_DEFAULT);
-        } elseif ($encryption_type == 'pw_bcrypt') {
-            $password_hashed = crypt($password_in, '$2a$07$usesomesillystringforsalt$');
-        } elseif ($encryption_type == 'pw_md5') {
-            $password_hashed = crypt($password_in, '$1$rasmusle$');
-            // $password_hashed = crypt($password_in, '$1$dblrecak$');
-        } else {
-            $password_hashed = crypt($password_in, '$5$rounds=5000$usesomesillystringforsalt$');
-        }
-
+        $password_hashed = crypt($password_in, '$2a$07$N14lhw48Y01leV3r5a73wlyd4$');
+// usesomesillystringforsalt
+// h01lyw4N15a73w84lleV3rYd4
         $ht_pair = $username . ":" . $password_hashed;
-
-
 
         // $password = "cats".$num_words;
 

@@ -5,7 +5,8 @@
 -------------------------------------------------------------
 ------------------------------------------------------------- */
 
-@import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);
+/*@import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);*/
+@import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Oswald:400,700|Permanent+Marker|Cutive+Mono);
 
 /* ---------------------------------------
     Main Structure
@@ -20,9 +21,11 @@ box-sizing: border-box;
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
 }
 
 body {
+    height: 100%;
 }
 
 .right_align{
@@ -39,7 +42,7 @@ body {
 header{
     position: fixed;
     top:0;
-    height: 150px;
+    height: 130px;
     text-align: center;
     width: 20%;
     background-color: #f0f4f4;
@@ -57,19 +60,34 @@ header{
     Navigation
 --------------------------------------- */
 
-nav{
+#top_nav{
+    display: none;
     position: fixed;
-    top:150px;
+    top:0;
+    right:0;
+    width: 80%;
+}
+
+#top_nav a{
+    padding-top: 50px;
+    width: 25%;
+    float:left;
+    height: 130px;
+}
+
+#side_nav{
+    position: fixed;
+    top:130px;
     bottom:0;
     width:20%;
     background-color: #f0f4f4;
 }
 
-nav .sidebar-links {
+#side_nav .nav-links {
 	margin: 20px auto;
 }
 
-nav .sidebar-links a {
+.nav-links a {
     font-family: 'Cutive Mono',monospace;
 	display: block;
 	text-decoration: none;
@@ -84,27 +102,27 @@ nav .sidebar-links a {
 
 /* Link Colors */
 
-nav .sidebar-links a.link-users {
+.nav-links a.link-users {
 	background-color: #99D19C;
 	/*background-color: #BED8D4;*/
 }
 
-nav .sidebar-links a.link-text {
+.nav-links a.link-text {
 	background-color: #73AB84;
 	/*background-color: #78D5D7;*/
 }
 
-nav .sidebar-links a.link-password {
+.nav-links a.link-password {
 	background-color: #ADE1E5;
 	/*background-color: #63D2FF;*/
 }
 
-nav .sidebar-links a.link-htaccess {
+.nav-links a.link-htaccess {
 	background-color: #79C7C5;
 	/*background-color: #2081C3;*/
 }
 
-nav .sidebar-links a:hover {
+.nav-links a:hover {
     background-color: #BF8B85;
 }
 
@@ -116,6 +134,16 @@ main{
     padding:30px;
     max-width: 1100px;
     overflow: hidden;
+}
+
+#furiosa{
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
+
+#furiosa img{
+    float: left;
 }
 
 .btn.btn-default.number_choice {
@@ -137,17 +165,52 @@ main{
     text-align: center;
     width: 50%;
     float:left;
+    padding-top: 5%;
 }
 
+#index_page{
+    position: fixed;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+}
 
-#user_box{background-color: #99D19C;}
-#text_box{background-color: #73AB84;}
-#password_box{background-color: #ADE1E5;}
-#htaccess_box{background-color: #79C7C5;}
+#user_box{
+    background-color: #99D19C;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 50%;
+}
+#text_box{
+    background-color: #73AB84;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 50%;
+    height: 50%;
+}
+#password_box{
+    background-color: #ADE1E5;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 50%;
+    height: 50%;
+}
+#htaccess_box{
+    background-color: #79C7C5;
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 50%;
+    height: 50%;
+}
 
 i{
     color: #fff;
-    margin-top: 20px;
 }
 
 .tile h2{
@@ -159,11 +222,10 @@ i{
 
 a.tile {
 	display: block;
-	padding: 20px 90px;
     text-align: center;
     width: 100%;
-    height: 250px;
-    float:left;
+    height: 100%;
+    padding: 20px;
 }
 
 a.tile:hover {
@@ -350,5 +412,5 @@ font-family: 'Cutive Mono', monospace;
     color: #666;
     padding: 10px;
     font-size: 12px;
-    height: 180px;
+    height: 130px;
 }

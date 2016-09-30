@@ -63,14 +63,35 @@
 
 
 @media only screen
-and (max-width : 1300px) {
+and (min-width : 2000px) {
+    header{height: 300px;}
+    #site_logo{font-size: 70px;}
+    .tile h2{font-size: 80px;}
+    a.tile{padding: 20%;}
+    nav{top:250px;}
+    nav .nav-links a{
+        font-size: 32px;
+        padding: 25px;
+    }
+
 }
 
 
 @media only screen
-and (max-width : 1030px) {
+and (max-width : 2000px) {
+    #site_logo{font-size: 50px;}
 }
 
+
+@media only screen
+and (max-width : 1300px) {
+    #site_logo{font-size: 40px;}
+}
+
+@media only screen
+and (max-width : 1200px) {
+    #site_logo{font-size: 30px;}
+}
 /* ------------------------------------- */
 /* ------------------------------------- */
 /*             Large Screens             */
@@ -79,9 +100,11 @@ and (max-width : 1030px) {
 
 
 @media only screen
-and (max-width : 900px)
+and (max-width : 1000px)
 /*and (min-width : 601px)*/ {
-
+    main{margin-left: 0px;margin-top: 130px;}
+    #side_nav{display: none;}
+    #top_nav{display: block;}
 
 }
 
