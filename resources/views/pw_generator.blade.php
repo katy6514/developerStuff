@@ -39,7 +39,7 @@
         <button type="submit" class="btn btn-default number_choice" value="4" name="num_words">4</button>
         <button type="submit" class="btn btn-default number_choice" value="5" name="num_words">5</button>
         <button type="submit" class="btn btn-default memorable_choice" value="memorable" name="num_words">Grammatically correct 4</button>
-        <!-- <a href="/furiosaPassword" class="btn btn-default memorable_choice">FANG IT</a> -->
+        <a href="/furiosaPassword" class="btn btn-default memorable_choice">FANG IT</a>
 
 
 

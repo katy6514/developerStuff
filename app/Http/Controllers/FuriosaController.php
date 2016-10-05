@@ -10,29 +10,14 @@ use Storage;
 
 class FuriosaController extends Controller {
 
-    // private function scrape($json_file, $word_type) {
-    //         $rawdata = file_get_contents($json_file);
-    //         $object = json_decode($rawdata, true);
-    //         return $object[$word_type];
-    // }
-    //
-    //
-    // public function __construct() {
-    //     # Put anything here that should happen before any of the other actions
-    //     $this->nouns = $this->scrape('words/nouns.json', 'nouns');
-    //     $this->adverbs = $this->scrape('words/adverbs.json', 'adverbs');
-    //     $this->adjectives = $this->scrape('words/adjs.json', 'adjs');
-    //     $this->allverbs = $this->scrape('words/verbs.json', 'verbs');
-    //
-    //     $this->verbs = array();
-    //
-    //     foreach ($this->allverbs as $verb) {
-    //         array_push($this->verbs, $verb['past']);
-    //     }
-    // }
-
     private $formdata = [
         'num_words' => '',
+        'rev_yes' => '',
+        'separator' => '',
+        'separator_none' => '',
+        'separator_space' => '',
+        'separator_dash' => '',
+        'separator_dot' => '',
     ];
 
     public function getIndex() {
@@ -42,57 +27,63 @@ class FuriosaController extends Controller {
 
     public function postIndex(Request $request) {
 
-        $num_words = $request->input('num_words');
-
-        $word_list = Storage::get('furyRoadWords.txt');
-        $line_list = Storage::get('furyRoadLines.txt');
-        // $trimmed = trim($word_list,'\n');
-        $words = preg_split("/[\s,]+/", $word_list);
-        $word_list_length = count($words);
-
         // generate the password
+        $num_words = $request->input('num_words');
+        $separator = $request->input('separator');
+
+
+        if ($separator == ' ') {
+            $this->formdata['separator_space'] = 'checked';
+        } else if ($separator == '.') {
+            $this->formdata['separator_dot'] = 'checked';
+        } else if ($separator == '') {
+            $this->formdata['separator_none'] = 'checked';
+        } else {
+            $this->formdata['separator_dash'] = 'checked';
+        }
+
+
         $password = "";
 
-        if ($num_words == 'memorable') {
-            $adjective = $this->adjectives[rand(0, (count($this->adjectives) - 1))];
-            $noun = $this->nouns[rand(0, (count($this->nouns) - 1))];
-            $verb = $this->verbs[rand(0, (count($this->verbs) - 1))];
-            $adverb = $this->adverbs[rand(0, (count($this->adverbs) - 1))];
+        if ($num_words == 'movie_line') {
+            $line_list = Storage::get('furyRoadLines.txt');
+            $lines = preg_split("/[\n,]+/", $line_list);
+            $line_list_length = count($lines);
 
-            $password = $adjective . " " . $noun . " " .$verb . " " . $adverb;
+            $line_index = rand(0,$line_list_length);
+            $new_line = trim($lines[$line_index]);
+            $new_line = str_replace(' ', $separator, $new_line);
+            $password = $new_line;
 
         } else {
+            $word_list = Storage::get('furyRoadWords.txt');
+            $words = preg_split("/[\s,]+/", $word_list);
+            $word_list_length = count($words);
+
             for ($i=0; $i < $num_words; $i++) {
                 $word_index = rand(0,$word_list_length);
-                // dump($word_index);
                 $new_word = trim($words[$word_index]);
 
                 if ($i < $num_words-1) {
-                    $password .= $new_word." ";
+                    $password .= $new_word.$separator;
                 } else {
                     $password .= $new_word;
                 }
             }
         }
 
-        if ($symbol == "on") {
-            $password .= $random_special_char;
+
+        // extras
+        $rev_it_up = $request->input('rev_it_up');
+        if ($rev_it_up == "on") {
+            $this->formdata['rev_yes'] = 'checked';
+            $password .= "V8!";
         }
 
-        if ($number == "on") {
-            $password .= rand(0,9);
-        }
 
 
-        // $password = "cats".$num_words;
-
-        return view('pw_generator')
+        return view('FR_pw_generator')
             ->with('password', $password)
             ->with('formdata', $this->formdata);
-
-
-
-
     }
-
 }

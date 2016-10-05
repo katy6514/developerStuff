@@ -6,7 +6,7 @@
 ------------------------------------------------------------- */
 
 /*@import url(https://fonts.googleapis.com/css?family=Cutive+Mono|Oswald);*/
-@import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Oswald:400,700|Permanent+Marker|Cutive+Mono);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Permanent+Marker|Cutive+Mono);
 
 /* ---------------------------------------
     Main Structure
@@ -136,15 +136,6 @@ main{
     overflow: hidden;
 }
 
-#furiosa{
-    margin: 0;
-    padding:0;
-    width: 100%;
-}
-
-#furiosa img{
-    float: left;
-}
 
 .btn.btn-default.number_choice {
     font-size: 20px;
@@ -157,6 +148,9 @@ main{
     padding-right: 50px;
     width:auto;
 }
+
+
+
 
 /* ---------------------------------------
     Home Page
@@ -413,4 +407,167 @@ font-family: 'Cutive Mono', monospace;
     padding: 10px;
     font-size: 12px;
     height: 130px;
+}
+
+/* ---------------------------------------
+    Furiosa Page
+--------------------------------------- */
+#furiosa{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    background-image: url("/img/concrete_wall_@2X.png");
+    background-repeat: repeat;
+}
+
+#furiosa main{
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1300px;
+}
+
+#micaelas_furiosa{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 20px;
+    float: left;
+}
+
+#mm_pic{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: auto;
+    width: auto;
+    max-width: 450px;
+}
+
+#fr_pic{
+    position: relative;
+    bottom:30px;
+    left:30px;
+    height: auto;
+    width: auto;
+    max-width: 700px;
+
+}
+
+#furiosa h1,
+#furiosa h2,
+#furiosa h3{
+    color: white;
+    font-family: "Oswald";
+}
+
+#furiosa h1{margin-top: 0;}
+
+#furiosa h4{
+    color: #c52026;
+    font-size: 24px;
+    font-family: "Permanent Marker";
+}
+
+#furiosa a {
+    color: #E14549;
+}
+
+#furiosa .radiobutton, #furiosa .checkbox{
+    width: 40%;
+    float: left;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+#furiosa .checkbox{
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+.radio_grp{
+    float: left;
+    width:50%;
+}
+
+#furiosa input[type="radio"],
+#furiosa input[type="checkbox"]{
+    margin-right: 5px;
+}
+
+#furiosa #password_color_bar{
+    background-color: #680932;
+}
+
+#fr_password_input{
+    float: left;
+    width: 55%;
+}
+
+#fr_password_output{
+    margin-top: 15px;
+    float: left;
+    width: 55%;
+    max-width: 700px;
+    height: auto;
+}
+
+#fr_password_output #password p{
+    background-color: #FDC99C;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#art_credit{
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #aaa;
+    float: left;
+    width:25%;
+    text-align: left;
+}
+
+#back_link{
+padding-top: 20px;
+   margin-top: 60px;
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+
+a#back_link {
+    color: #ADE1E5;
+}
+
+
+.fr_btn {
+ background: #d9d9d9 ;
+ background-image: -webkit-linear-gradient(top, #d9d9d9 , #525252 );
+ background-image: -moz-linear-gradient(top, #d9d9d9 , #525252 );
+ background-image: -ms-linear-gradient(top, #d9d9d9 , #525252 );
+ background-image: -o-linear-gradient(top, #d9d9d9 , #525252 );
+ background-image: linear-gradient(to bottom, #d9d9d9 , #525252 );
+ -webkit-border-radius: 9;
+ -moz-border-radius: 9;
+ border-radius: 9px;
+ text-shadow: 1px 1px 3px #666666 ;
+ -webkit-box-shadow: 0px 1px 3px #666666 ;
+ -moz-box-shadow: 0px 1px 3px #666666 ;
+ box-shadow: 0px 1px 3px #666666 ;
+ font-family: "Permanent Marker";
+ color: #333 ;
+ font-size: 25px;
+ padding: 10px 40px 10px 40px;
+ margin: 2px;
+ text-decoration: none;
+ border:0;
+}
+
+.fr_btn:hover {
+ background: #fa9e3c ;
+ background-image: -webkit-linear-gradient(top, #fa9e3c , #d93434 );
+ background-image: -moz-linear-gradient(top, #fa9e3c , #d93434 );
+ background-image: -ms-linear-gradient(top, #fa9e3c , #d93434 );
+ background-image: -o-linear-gradient(top, #fa9e3c , #d93434 );
+ background-image: linear-gradient(to bottom, #fa9e3c , #d93434 );
+ text-decoration: none;
 }
