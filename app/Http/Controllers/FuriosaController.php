@@ -82,7 +82,7 @@ class FuriosaController extends Controller {
 
 
 
-        return view('FR_pw_generator')
+        return view('fr_pw_generator')
             ->with('password', $password)
             ->with('formdata', $this->formdata);
     }
