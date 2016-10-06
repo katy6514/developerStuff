@@ -107,7 +107,7 @@
         <div class="section group">
             <div class="col span_1_of_2">
                 <div id="art_credit">
-                    Artwork by the fantastic <a href="http://www.micaeladawn.com/">Micaela Dawn</a>. Buy the Furiosa print <a href="https://www.inprnt.com/gallery/micaela_dawn/imperator-furiosa/">here!</a>
+                    Artwork by the talented <a href="http://www.micaeladawn.com/">Micaela Dawn</a>. Buy the Furiosa print <a href="https://www.inprnt.com/gallery/micaela_dawn/imperator-furiosa/">here!</a>
                 </div>
             </div>
             <div class="col span_1_of_2">
