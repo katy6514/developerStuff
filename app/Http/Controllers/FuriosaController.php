@@ -32,14 +32,21 @@ class FuriosaController extends Controller {
         $separator = $request->input('separator');
 
 
-        if ($separator == ' ') {
+        if ($separator == '') {
             $this->formdata['separator_space'] = 'checked';
+            $separator = " ";
+        } else if ($separator == 'space') {
+            $this->formdata['separator_space'] = 'checked';
+            $separator = " ";
         } else if ($separator == '.') {
             $this->formdata['separator_dot'] = 'checked';
-        } else if ($separator == '') {
+            $separator = ".";
+        } else if ($separator == 'none') {
             $this->formdata['separator_none'] = 'checked';
+            $separator = "";
         } else {
             $this->formdata['separator_dash'] = 'checked';
+            $separator = "-";
         }
 
 

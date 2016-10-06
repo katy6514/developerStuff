@@ -51,6 +51,17 @@
 .span_2_of_4 { width: 47.7%; }
 .span_1_of_4 { width: 23.8%; }
 
+
+/*  GRID OF EIGHT  */
+.span_8_of_8 {width: 100%;}
+.span_7_of_8 {width: 87.3%;}
+.span_6_of_8 {width: 74.6%;}
+.span_5_of_8 {width: 61.9%;}
+.span_4_of_8 {width: 49.2%;}
+.span_3_of_8 {width: 36.5%;}
+.span_2_of_8 {width: 23.8%;}
+.span_1_of_8 {width: 11.1%;}
+
 /*.padded-content{
     max-width:1024px;
     margin:0px auto;

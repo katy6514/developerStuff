@@ -432,6 +432,7 @@ font-family: 'Cutive Mono', monospace;
     margin-left: 0;
     margin-right: 20px;
     float: left;
+    width: 100%;
 }
 
 #mm_pic{
@@ -501,14 +502,13 @@ font-family: 'Cutive Mono', monospace;
 
 #fr_password_input{
     float: left;
-    width: 55%;
+    width: 100%;
 }
 
 #fr_password_output{
     margin-top: 15px;
     float: left;
-    width: 55%;
-    max-width: 700px;
+    width: 100%;
     height: auto;
 }
 
@@ -518,19 +518,14 @@ font-family: 'Cutive Mono', monospace;
 }
 
 #art_credit{
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin: 0px 10px;
     color: #aaa;
     float: left;
-    width:25%;
     text-align: left;
 }
 
 #back_link{
-padding-top: 20px;
-   margin-top: 60px;
-    width: 30%;
-    float: left;
+    float: right;
     text-align: right;
 }
 
@@ -540,34 +535,34 @@ a#back_link {
 
 
 .fr_btn {
- background: #d9d9d9 ;
- background-image: -webkit-linear-gradient(top, #d9d9d9 , #525252 );
- background-image: -moz-linear-gradient(top, #d9d9d9 , #525252 );
- background-image: -ms-linear-gradient(top, #d9d9d9 , #525252 );
- background-image: -o-linear-gradient(top, #d9d9d9 , #525252 );
- background-image: linear-gradient(to bottom, #d9d9d9 , #525252 );
- -webkit-border-radius: 9;
- -moz-border-radius: 9;
- border-radius: 9px;
- text-shadow: 1px 1px 3px #666666 ;
- -webkit-box-shadow: 0px 1px 3px #666666 ;
- -moz-box-shadow: 0px 1px 3px #666666 ;
- box-shadow: 0px 1px 3px #666666 ;
- font-family: "Permanent Marker";
- color: #333 ;
- font-size: 25px;
- padding: 10px 40px 10px 40px;
- margin: 2px;
- text-decoration: none;
- border:0;
+    background: #d9d9d9 ;
+    background-image: -webkit-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -moz-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -ms-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -o-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: linear-gradient(to bottom, #d9d9d9 , #525252 );
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    text-shadow: 1px 1px 3px #666666 ;
+    -webkit-box-shadow: 0px 1px 3px #666666 ;
+    -moz-box-shadow: 0px 1px 3px #666666 ;
+    box-shadow: 0px 1px 3px #666666 ;
+    font-family: "Permanent Marker";
+    color: #333 ;
+    font-size: 25px;
+    padding: 10px 40px 10px 40px;
+    margin: 2px;
+    text-decoration: none;
+    border:0;
 }
 
 .fr_btn:hover {
- background: #fa9e3c ;
- background-image: -webkit-linear-gradient(top, #fa9e3c , #d93434 );
- background-image: -moz-linear-gradient(top, #fa9e3c , #d93434 );
- background-image: -ms-linear-gradient(top, #fa9e3c , #d93434 );
- background-image: -o-linear-gradient(top, #fa9e3c , #d93434 );
- background-image: linear-gradient(to bottom, #fa9e3c , #d93434 );
- text-decoration: none;
+    background: #fa9e3c ;
+    background-image: -webkit-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -moz-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -ms-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -o-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: linear-gradient(to bottom, #fa9e3c , #d93434 );
+    text-decoration: none;
 }

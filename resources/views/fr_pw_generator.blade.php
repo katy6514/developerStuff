@@ -35,79 +35,85 @@
 	@endif
 
     <main>
-
-        <img id="micaelas_furiosa" src="img/micaelas_furiosa.jpg" alt="illo of imperator furiosa by Micaela Dawn" />
-
-        <div id="fr_password_input">
-            <!-- @if(count($errors) > 0)
-                @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    {{ $error }}
-                    </div>
-                @endforeach
-            @endif -->
-
-            <img id="mm_pic" src="img/madMax.png" />
-            <img id="fr_pic" src="img/furyRoad.png" />
-
-            <h1>PASSWORD GENERATOR</h1>
-
-            <div id="password_color_bar"></div>
-
-            <form method="POST" action="furiosaPassword">
-
-                <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
-
-                <h3>OPTIONS</h3>
-                <div class="radiobutton">
-                    <h4> Choose a separator</h4>
-                    <div class="radio_grp">
-                        <input type="radio" name="separator" value="" <?php echo $formdata['separator_none']; ?>> None<br>
-                        <input type="radio" name="separator" value=" " <?php echo $formdata['separator_space']; ?>> Space<br>
-                    </div>
-                    <div class="radio_grp">
-                        <input type="radio" name="separator" value="-" <?php echo $formdata['separator_dash']; ?>> Dash<br>
-                        <input type="radio" name="separator" value="." <?php echo $formdata['separator_dot']; ?>> Dot<br>
-                    </div>
-                </div>
-                <div class="checkbox">
-                    <h4>Rev it up?</h4>
-                    <label>
-                        <input type="checkbox" name="rev_it_up" <?php echo $formdata['rev_yes']; ?>>By my deeds I honor him<br>
-                    </label>
-                </div>
-
-                <h3 style="clear:both; padding-top:20px;"> HOW MANY WORDS? </h3>
-                <button type="submit" class="fr_btn number_choice" value="2" name="num_words">2</button>
-                <button type="submit" class="fr_btn number_choice" value="3" name="num_words">3</button>
-                <button type="submit" class="fr_btn number_choice" value="4" name="num_words">4</button>
-                <button type="submit" class="fr_btn number_choice" value="5" name="num_words">5</button>
-                <button type="submit" class="fr_btn memorable_choice" value="movie_line" name="num_words">THUNDER UP</button>
-
-            </form>
-        </div> <!-- close password input -->
-
-
-
-        <div id="fr_password_output">
-            <div id="password">
-
-            	@if(isset($password))
-                    <p>{{$password}}</p>
-                @endif
+        <div class="section group">
+            <div class="col span_3_of_8" style="margin-top:0;">
+                <img id="micaelas_furiosa" src="img/micaelas_furiosa.jpg" alt="illo of imperator furiosa by Micaela Dawn" />
             </div>
+            <div class="col span_5_of_8">
 
-        </div> <!-- close password output -->
+                <div id="fr_password_input">
+                    <!-- @if(count($errors) > 0)
+                        @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {{ $error }}
+                            </div>
+                        @endforeach
+                    @endif -->
+
+                    <img id="mm_pic" src="img/madMax.png" />
+                    <img id="fr_pic" src="img/furyRoad.png" />
+
+                    <h1>PASSWORD GENERATOR</h1>
+
+                    <div id="password_color_bar"></div>
+
+                    <form method="POST" action="furiosaPassword">
+
+                        <input name="_token" type="hidden" value="{!! csrf_token() !!}" />
+
+                        <h3>OPTIONS</h3>
+                        <div class="radiobutton">
+                            <h4> Choose a separator</h4>
+                            <div class="radio_grp">
+                                <input type="radio" name="separator" value="space" <?php echo $formdata['separator_space']; ?>> Space<br>
+                                <input type="radio" name="separator" value="none" <?php echo $formdata['separator_none']; ?>> None<br>
+                            </div>
+                            <div class="radio_grp">
+                                <input type="radio" name="separator" value="-" <?php echo $formdata['separator_dash']; ?>> Dash<br>
+                                <input type="radio" name="separator" value="." <?php echo $formdata['separator_dot']; ?>> Dot<br>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <h4>Rev it up?</h4>
+                            <label>
+                                <input type="checkbox" name="rev_it_up" <?php echo $formdata['rev_yes']; ?>>By my deeds I honor him<br>
+                            </label>
+                        </div>
+
+                        <h3 style="clear:both; padding-top:20px;"> HOW MANY WORDS? </h3>
+                        <button type="submit" class="fr_btn number_choice" value="2" name="num_words">2</button>
+                        <button type="submit" class="fr_btn number_choice" value="3" name="num_words">3</button>
+                        <button type="submit" class="fr_btn number_choice" value="4" name="num_words">4</button>
+                        <button type="submit" class="fr_btn number_choice" value="5" name="num_words">5</button>
+                        <button type="submit" class="fr_btn memorable_choice" value="movie_line" name="num_words">THUNDER UP</button>
+
+                    </form>
+                </div> <!-- close password input -->
 
 
-        <div id="art_credit">
-            Artwork by the fantastic <a href="http://www.micaeladawn.com/">Micaela Dawn</a>.<br>
-            <a href="https://www.inprnt.com/gallery/micaela_dawn/imperator-furiosa/">Buy the Furiosa print here!</a>
+
+                <div id="fr_password_output">
+                    <div id="password">
+
+                    	@if(isset($password))
+                            <p>{{$password}}</p>
+                        @endif
+                    </div>
+
+                </div> <!-- close password output -->
+            </div> <!-- Close col -->
+        </div> <!-- Close section group -->
+        <div class="section group">
+            <div class="col span_1_of_2">
+                <div id="art_credit">
+                    Artwork by the fantastic <a href="http://www.micaeladawn.com/">Micaela Dawn</a>. Buy the Furiosa print <a href="https://www.inprnt.com/gallery/micaela_dawn/imperator-furiosa/">here!</a>
+                </div>
+            </div>
+            <div class="col span_1_of_2">
+                <a id="back_link" href="/password">Back to the green place</a>
+            </div>
         </div>
-
-        <a id="back_link" href="/password">Back to the green place</a>
-
     </main>
 
 
