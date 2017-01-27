@@ -1,0 +1,349 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Permanent+Marker|Cutive+Mono);
+
+/* ------------------------------------------------
+    Password Generator Styles
+------------------------------------------------ */
+
+#password_color_bar{
+	background-color: #ADE1E5;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+}
+
+#password_output{
+    padding-top:20px;
+    width: 100%;
+}
+
+#password_output img{
+    display: block;
+    margin: 20px auto 0px auto;
+    width: 600px;
+}
+
+#password_output a{
+    display: block;
+    text-align: center;
+}
+
+#password{
+    text-align: center;
+}
+
+#password p{
+    width: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 36px;
+    background-color: #d8f1f3;
+}
+
+/* ---------------------------------------
+    Furiosa Page
+--------------------------------------- */
+
+#furiosa{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    background-image: url("/img/concrete_wall_@2X.png");
+    background-repeat: repeat;
+}
+
+#furiosa main{
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1300px;
+}
+
+#micaelas_furiosa{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 20px;
+    float: left;
+    width: 100%;
+}
+
+#mm_pic{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: auto;
+    width: auto;
+    max-width: 450px;
+}
+
+#fr_pic{
+    position: relative;
+    bottom:30px;
+    left:30px;
+    height: auto;
+    width: auto;
+    max-width: 700px;
+
+}
+
+#furiosa h1,
+#furiosa h2,
+#furiosa h3{
+    color: white;
+    font-family: "Oswald";
+}
+
+#furiosa h1{margin-top: 0;}
+
+#furiosa h4{
+    color: #c52026;
+    font-size: 24px;
+    font-family: "Permanent Marker";
+}
+
+#furiosa a {
+    color: #E14549;
+}
+
+#furiosa .radiobutton, #furiosa .checkbox{
+    width: 40%;
+    float: left;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+#furiosa .checkbox{
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+.radio_grp{
+    float: left;
+    width:50%;
+}
+
+#furiosa input[type="radio"],
+#furiosa input[type="checkbox"]{
+    margin-right: 5px;
+}
+
+#furiosa #password_color_bar{
+    background-color: #680932;
+}
+
+#fr_password_input{
+    float: left;
+    width: 100%;
+}
+
+#fr_password_output{
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+#fr_password_output #password p{
+    background-color: #FDC99C;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#art_credit{
+    margin: 0px 10px;
+    color: #aaa;
+    float: left;
+    text-align: left;
+}
+
+#back_link{
+    float: right;
+    text-align: right;
+}
+
+a#back_link {
+    color: #ADE1E5;
+}
+
+
+.fr_btn {
+    background: #d9d9d9 ;
+    background-image: -webkit-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -moz-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -ms-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: -o-linear-gradient(top, #d9d9d9 , #525252 );
+    background-image: linear-gradient(to bottom, #d9d9d9 , #525252 );
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    text-shadow: 1px 1px 3px #666666 ;
+    -webkit-box-shadow: 0px 1px 3px #666666 ;
+    -moz-box-shadow: 0px 1px 3px #666666 ;
+    box-shadow: 0px 1px 3px #666666 ;
+    font-family: "Permanent Marker";
+    color: #333 ;
+    font-size: 25px;
+    padding: 10px 40px 10px 40px;
+    margin: 2px;
+    text-decoration: none;
+    border:0;
+}
+
+.fr_btn:hover {
+    background: #fa9e3c ;
+    background-image: -webkit-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -moz-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -ms-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: -o-linear-gradient(top, #fa9e3c , #d93434 );
+    background-image: linear-gradient(to bottom, #fa9e3c , #d93434 );
+    text-decoration: none;
+}
+/* ==========================================================================
+   Responsive Grid Styling
+   http://www.responsivegridsystem.com/
+   ========================================================================== */
+
+/* -------------------------------------
+  General Setup
+------------------------------------- */
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF TWO  */
+.span_2_of_2 {width: 100%;}
+.span_1_of_2 {width: 49.2%;}
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.1%; }
+.span_1_of_3 { width: 32.2%; }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media only screen
+and (min-width : 2000px) {
+    header{height: 300px;}
+    #site_logo{font-size: 70px;}
+    .tile h2{font-size: 80px;}
+    a.tile{padding: 20%;}
+    nav{top:250px;}
+    nav .nav-links a{
+        font-size: 32px;
+        padding: 25px;
+    }
+
+}
+
+
+@media only screen
+and (max-width : 2000px) {
+    #site_logo{font-size: 50px;}
+}
+
+
+@media only screen
+and (max-width : 1300px) {
+    #site_logo{font-size: 40px;}
+}
+
+@media only screen
+and (max-width : 1200px) {
+    #site_logo{font-size: 30px;}
+}
+/* ------------------------------------- */
+/* ------------------------------------- */
+/*             Large Screens             */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+@media only screen
+and (max-width : 1000px)
+/*and (min-width : 601px)*/ {
+    body{margin-left: 0px;margin-top: 0px;}
+
+}
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/*             Middle Screens            */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+@media only screen
+and (max-width : 655px)
+/*and (min-width : 501px)*/ {
+
+}
+
+
+
+
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/*              Small Screens            */
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+
+@media only screen
+and (max-width: 480px){
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+	.span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 { width: 100%; }
+
+}
+
+
+
+@media only screen
+and (max-width: 396px){
+
+}
+
+
+
+
+@media only screen
+and (max-width: 260px){
+}

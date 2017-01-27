@@ -15,8 +15,8 @@
     <meta name="subject" content=""/>
 
     <link rel='stylesheet' href='/css/normalize.css' type='text/css'>
-    <link rel='stylesheet' href='/css/main.css' type='text/css'>
-    <link rel='stylesheet' href='/css/responsive.css' type='text/css'>
+    <link rel='stylesheet' href='/css/furiosa.css' type='text/css'>
+
     <!-- Yield any page specific CSS files or anything else you might want in the <head> -->
     <!-- @yield('head') -->
 
@@ -28,7 +28,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body id="furiosa">
+<body id="furiosa" style="margin-top:0px;">
 
 	@if(Session::get('flash_message'))
 		<div class='flash-message'>{{ Session::get('flash_message') }}</div>

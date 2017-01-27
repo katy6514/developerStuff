@@ -114,6 +114,7 @@ and (max-width : 1200px) {
 and (max-width : 1000px)
 /*and (min-width : 601px)*/ {
     main{margin-left: 0px;margin-top: 130px;}
+    body#furiosa{margin-left: 0px;margin-top: 0px;}
     #side_nav{display: none;}
     #top_nav{display: block;}
 
