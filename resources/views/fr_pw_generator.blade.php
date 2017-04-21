@@ -20,8 +20,6 @@
     <!-- Yield any page specific CSS files or anything else you might want in the <head> -->
     <!-- @yield('head') -->
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Theme -->

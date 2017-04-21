@@ -11,30 +11,13 @@
 |
 */
 
-
-
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-
-Route::get('/practice', function() {
-  echo App::environment();
-    $data = Array('foo' => 'bar');
-    Debugbar::info($data);
-    Debugbar::error('Error!');
-    Debugbar::warning('Watch out…');
-    Debugbar::addMessage('Another message', 'mylabel');
-
-    return 'Practice';
-
-});
-
-
-
 Route::get('/', function() {
   return view('index');
 });
 
 Route::get('/users', 'UserController@getIndex');
 Route::post('/users', 'UserController@postIndex');
+
 Route::get('/loremIpsum', 'LipsumController@getIndex');
 Route::post('/loremIpsum', 'LipsumController@postIndex');
 
@@ -46,3 +29,21 @@ Route::post('/furiosaPassword', 'FuriosaController@postIndex');
 
 Route::get('/htpassword','HTpasswordController@getIndex');
 Route::post('/htpassword', 'HTpasswordController@postIndex');
+
+
+# Local Tools
+if(App::environment('local')){
+    Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+    Route::get('/practice', function() {
+      echo App::environment();
+        $data = Array('foo' => 'bar');
+        Debugbar::info($data);
+        Debugbar::error('Error!');
+        Debugbar::warning('Watch out…');
+        Debugbar::addMessage('Another message', 'mylabel');
+
+        return 'Practice';
+
+    });
+}
