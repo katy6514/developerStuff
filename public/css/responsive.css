@@ -76,7 +76,7 @@
 @media only screen
 and (min-width : 2000px) {
     header{height: 300px;}
-    #site_logo{font-size: 70px;}
+    #site_logo{font-size: 50px;}
     .tile h2{font-size: 80px;}
     a.tile{padding: 20%;}
     nav{top:250px;}
@@ -87,21 +87,9 @@ and (min-width : 2000px) {
 
 }
 
-
 @media only screen
-and (max-width : 2000px) {
-    #site_logo{font-size: 50px;}
-}
-
-
-@media only screen
-and (max-width : 1300px) {
+and (max-width : 1500px) {
     #site_logo{font-size: 40px;}
-}
-
-@media only screen
-and (max-width : 1200px) {
-    #site_logo{font-size: 30px;}
 }
 /* ------------------------------------- */
 /* ------------------------------------- */
@@ -111,8 +99,9 @@ and (max-width : 1200px) {
 
 
 @media only screen
-and (max-width : 1000px)
+and (max-width : 1160px)
 /*and (min-width : 601px)*/ {
+    #site_logo{font-size: 30px;}
     main{margin-left: 0px;margin-top: 130px;}
     body#furiosa{margin-left: 0px;margin-top: 0px;}
     #side_nav{display: none;}
@@ -129,9 +118,9 @@ and (max-width : 1000px)
 
 
 @media only screen
-and (max-width : 655px)
+and (max-width : 800px)
 /*and (min-width : 501px)*/ {
-
+    #password_output img{width: 100%; margin:0;}
 }
 
 
@@ -153,6 +142,7 @@ and (max-width: 480px){
 	.span_2_of_2, .span_1_of_2 { width: 100%; }
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 	.span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 { width: 100%; }
+    #password_output img{width: 100%; margin:0;}
 
 }
 

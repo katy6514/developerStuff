@@ -53,10 +53,18 @@
 
         <nav id="top_nav">
             <div class="nav-links">
-                <a class="link-users" href="/users">Users</a>
-                <a class="link-text" href="/loremIpsum">Text</a>
-                <a class="link-password" href="/password">Passwords</a>
-                <a class="link-htaccess" href="/htpassword">htaccess</a>
+                <a class="link-users" href="/users">
+                    <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+                </a>
+                <a class="link-text" href="/loremIpsum">
+                    <i class="fa fa-align-left fa-2x" aria-hidden="true"></i>
+                </a>
+                <a class="link-password" href="/password">
+                    <i class="fa fa-key fa-2x" aria-hidden="true"></i>
+                </a>
+                <a class="link-htaccess" href="/htpassword">
+                    <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+                </a>
             </div>
         </nav>
     </div>
