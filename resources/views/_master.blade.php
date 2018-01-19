@@ -48,7 +48,7 @@
                 <a class="link-password" href="/password">Passwords</a>
                 <a class="link-htaccess" href="/htpassword">htaccess</a>
             </div>
-                &copy; {{ date('Y') }}
+            <p id="about_nav" style="width:90%; margin:0 auto;">A simple, Laravel-built web application for generating dummy data for populating databases and websites. You may also create secure passwords and login credentials for web servers running Apache. Have fun!</p>
         </nav>
 
         <nav id="top_nav">

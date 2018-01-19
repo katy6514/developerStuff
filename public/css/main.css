@@ -87,6 +87,16 @@ header{
 	margin: 20px auto;
 }
 
+/*#side_nav#about_nav{
+    position: fixed;
+    top:500;
+    height: 130px;
+    text-align: center;
+    width: 20%;
+    background-color: #f0f4f4;
+    padding:20px;
+}*/
+
 .nav-links a {
     font-family: 'Cutive Mono',monospace;
 	display: block;
