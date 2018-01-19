@@ -65,7 +65,7 @@
 #micaelas_furiosa{
     margin-top: 0;
     margin-left: 0;
-    margin-right: 20px;
+    margin-right: 0px;
     float: left;
     width: 100%;
 }
@@ -74,7 +74,7 @@
     margin-left: 0px;
     margin-top: 10px;
     height: auto;
-    width: auto;
+    width: 80%;
     max-width: 450px;
 }
 
@@ -83,7 +83,7 @@
     bottom:30px;
     left:30px;
     height: auto;
-    width: auto;
+    width: 90%;
     max-width: 700px;
 
 }
@@ -248,102 +248,44 @@ a#back_link {
 .span_2_of_3 { width: 66.1%; }
 .span_1_of_3 { width: 32.2%; }
 
+/*  GRID OF EIGHT  */
+.span_8_of_8 {
+	width: 100%;
+}
 
+.span_7_of_8 {
+  	width: 87.3%;
+}
+
+.span_6_of_8 {
+  	width: 74.6%;
+}
+
+.span_5_of_8 {
+  	width: 61.9%;
+}
+
+.span_4_of_8 {
+  	width: 49.2%;
+}
+
+.span_3_of_8 {
+  	width: 36.5%;
+}
+
+.span_2_of_8 {
+  	width: 23.8%;
+}
+
+.span_1_of_8 {
+  	width: 11.1%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_8, .span_2_of_8, .span_3_of_8, .span_4_of_8, .span_5_of_8, .span_6_of_8, .span_7_of_8, .span_8_of_8 { width: 100%; }
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-
-@media only screen
-and (min-width : 2000px) {
-    header{height: 300px;}
-    #site_logo{font-size: 70px;}
-    .tile h2{font-size: 80px;}
-    a.tile{padding: 20%;}
-    nav{top:250px;}
-    nav .nav-links a{
-        font-size: 32px;
-        padding: 25px;
-    }
-
-}
-
-
-@media only screen
-and (max-width : 2000px) {
-    #site_logo{font-size: 50px;}
-}
-
-
-@media only screen
-and (max-width : 1300px) {
-    #site_logo{font-size: 40px;}
-}
-
-@media only screen
-and (max-width : 1200px) {
-    #site_logo{font-size: 30px;}
-}
-/* ------------------------------------- */
-/* ------------------------------------- */
-/*             Large Screens             */
-/* ------------------------------------- */
-/* ------------------------------------- */
-
-
-@media only screen
-and (max-width : 1000px)
-/*and (min-width : 601px)*/ {
-    body{margin-left: 0px;margin-top: 0px;}
-
-}
-
-
-/* ------------------------------------- */
-/* ------------------------------------- */
-/*             Middle Screens            */
-/* ------------------------------------- */
-/* ------------------------------------- */
-
-
-@media only screen
-and (max-width : 655px)
-/*and (min-width : 501px)*/ {
-
-}
-
-
-
-
-
-/* ------------------------------------- */
-/* ------------------------------------- */
-/*              Small Screens            */
-/* ------------------------------------- */
-/* ------------------------------------- */
-
-
-@media only screen
-and (max-width: 480px){
-	.col {
-		margin: 1% 0 1% 0%;
-	}
-	.span_2_of_2, .span_1_of_2 { width: 100%; }
-	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
-	.span_4_of_4, .span_3_of_4, .span_2_of_4, .span_1_of_4 { width: 100%; }
-
-}
-
-
-
-@media only screen
-and (max-width: 396px){
-
-}
-
-
-
-
-@media only screen
-and (max-width: 260px){
-}
