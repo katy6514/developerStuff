@@ -4,5 +4,3 @@ Homestead.yaml
 Homestead.json
 .env
 storage/debugbar/*
-public/downloads/randomusers.json
-public/downloads/randomusers.csv
